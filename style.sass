@@ -1,0 +1,189 @@
+
+$width_page: 1920px
+$color_title: #112d58
+$color-text: #2d2058
+
+* 
+    padding: 0
+    margin: 0
+
+input
+    border: none
+    padding: 0
+    margin: 0
+
+
+.center
+    margin: 0 auto
+    width: $width_page
+
+.title
+    font-family: 'Poppins', sans-serif 
+    font-weight: 500
+    color: $color_title
+
+.text
+    font-family: 'Rubik', sans-serif
+    color: $color-text
+
+.flex
+    &_left_right 
+        justify-content: space-between
+        display: flex
+
+    &_vert_center 
+        display: flex
+        align-items: center
+
+    &_center 
+        justify-content: center
+        @extend .flex_vert_center
+
+// font-family: 'Rubik', sans-serif
+//font-family: 'Poppins', sans-serif
+//font-family: 'Nunito Sans', sans-serif 
+
+.conteiner
+    position: relative   
+    padding: 0 234px 0 256px
+
+.background
+    width: 100%
+    position: absolute
+    right: 0
+    &_header
+        position: absolute
+        right: 0 
+
+    &_aside
+        position: absolute
+        top: 667px
+        z-index: 2
+
+.header
+    position: relative
+    z-index: 1 
+    margin-bottom: 424px
+    &_top
+        @extend .flex_left_right   
+
+    &_content
+       width: 655px 
+       margin-top: 223px
+    &_title
+        @extend .title
+        font-size: 66px
+        line-height: 80px
+        margin-bottom: 50px
+        font-weight: 600
+
+    &_text
+        @extend .text
+        font-size: 26px
+        letter-spacing: 0.04em
+        margin-bottom: 60px
+
+    &_form
+        position: relative
+        width: 100%
+        height: 78px
+        &_input
+            height: 78px
+            width: 100%
+            background-color: #ffffff
+            border-radius: 39px
+            box-shadow: 0px 16px 122px 0px #d3d4d4
+            font-family: 'Nunito Sans', sans-serif 
+            font-size: 24px
+            font-weight: 600
+            color: $color-text
+            letter-spacing: 0.01em
+            line-height: 42px
+            padding: 0 85px 0 53px
+            &::placeholder
+               color: $color-text 
+               font-weight: 400
+
+        &_buttom  
+            height: 60px
+            width: 60px
+            background-color: #ffa024
+            border-radius: 60px 
+            border: none 
+            position: absolute
+            right: 13px
+            top: 9px 
+
+            &:hover
+               background-color: #ee8e11 
+
+.logo
+    font-family: 'Rubik', sans-serif
+    font-size: 36px
+    font-weight: bold
+    font-style: italic    
+    margin-top: 68px  
+    &_gold
+      color: rgba(253, 173, 51, 1)  
+    &_blue
+      color: rgba(62, 184, 244, 1)  
+
+.nav
+    margin-top: 52px
+
+    &-link
+        font-family: 'Nunito Sans', sans-serif 
+        font-size: 18px
+        font-weight: 600
+        color: rgba(255, 255, 255, 1)  
+        padding: 0 43px 
+        line-height: 44px
+        &:hover
+           border-radius: 21px 
+           border: 1px solid rgba(255, 255, 255, 1)      
+           color: rgba(255, 255, 255, 1)  
+
+
+    &_button
+        padding: 0
+        height: 42px
+        margin-left: 36px
+        width: 137px
+        border-radius: 21px  
+        background-image: linear-gradient(-80deg,  rgba(24, 56, 107, 1) 0%,rgba(41, 99, 187, 1) 99%)
+        @extend .flex_center
+
+        &:hover
+           color: rgba(255, 255, 255, 1) 
+           background-image: linear-gradient(-80deg,  rgba(24, 56, 107, 1) 0%,#457fd6 99%) 
+           border: none
+
+.main
+    width: 100%
+    &_block
+        width: 100%
+        @extend .flex_left_right 
+
+    &_find
+        width: 583px
+        padding-top: 120px
+        padding-left: 23px      
+        
+    &_million
+        width: 623px 
+        padding-top: 148px
+
+    &_title
+        @extend .title
+        font-size: 46px
+        line-height: 60px
+        margin-bottom: 45px
+
+    &_text
+        @extend .text
+        font-size: 22px
+        letter-spacing: 0.02em
+        line-height: 42px
+
+   
+   
