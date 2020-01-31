@@ -19,15 +19,22 @@
         <div class="background">
             <img src="img/header.png" alt="" class="background_header">
             <img src="img/aside.png" alt="" class="background_aside">
+            <img src="img/aside_right.png" alt="" class="background_aside_rigth">
+            <img src="img/footer_layer_1.png" alt="" class="background_footer">
+            <img src="img/footer_layer_2.png" alt="" class="background_footer">
+            <img src="img/footer_layer_3.png" alt="" class="background_footer">
+
 
     
         </div>
         <header class="header">
             <div class="header_top">
-                <a class="logo"><span class="logo_blue">JO</span><span class="logo_gold">BEST</span></a>
+                <a class="logo">
+                  <span class="logo_blue">JO</span><span class="logo_gold">BEST</span>
+                </a>
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                      <a class="nav-link active" href="#">Home</a>
+                      <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Jobs</a>
@@ -36,16 +43,17 @@
                       <a class="nav-link" href="#">Career tips</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link nav_button" href="#">Sign In</a>
+                        <a class="nav-link nav_button" href="#">Sign In</a>           
                     </li>
                   </ul>
             </div>  
             <div class="header_content">
+              <div class="header_text_inviz"></div>
                <h1 class="header_title">Find your job better and faster</h1> 
                <p class="header_text">Find your best job better and faster with Jobest</p>
                <form action="#" class="header_form">
                    <input type="" class="header_form_input" placeholder="Seacrh by skill, company and job"  required>
-                   <button class="header_form_buttom"></button>
+                   <a class="header_form_buttom"><i class="fas fa-search"></i><span class="header_form_search">Search</span></a>
                </form>
             </div>         
         </header> 
@@ -53,18 +61,181 @@
           <article class="main_block">
             <img src="img/find.png" alt="pic" class="maim_block_img">
             <div class="main_find">
-              <h2 class="main_title">Find your passion and achieve success</h2>
+              <h3 class="main_title">Find your passion and achieve success</h3>
               <p class="main_text">Find a&nbsp;job that suits your interests and talents. A&nbsp;high&nbsp;salary is&nbsp;not the top priority. Most importantly, You&nbsp;can work according to&nbsp;your heart&rsquo;s desire.</p>
             </div>
           </article>
           <article class="main_block">
             <div class="main_million">
-              <h2 class="main_title">Million of&nbsp;jobs, finds the&nbsp;one thats rights for you</h2>
-              <h2 class="main_text">Analytics bootstrapping buzz first mover advantage network effects funding handshake. Buyer social media burn rate interaction design prototype handshake.</h2>
+              <h3 class="main_title">Million of&nbsp;jobs, finds the&nbsp;one thats rights for you</h3>
+              <p class="main_text">Analytics bootstrapping buzz first mover advantage network effects funding handshake. Buyer social media burn rate interaction design prototype handshake.</p>
             </div>
             <img src="img/million.png" alt="pic" class="maim_block_img">
           </article>
         </section>
+        <section class="category">
+          <h2 class="category__title">Browse jobs by category</h2>
+          <p class="category__text">Choose from the list of most popular categories</p>
+          <div class="category__items">
+            <a href="#" class="typeWork">
+              <img src="img/Shape2.png" alt="Finance" class="typeWork__img">
+              <img src="img/Shape2_white.png" alt="Finance" class="typeWork__img_hover">
+
+              <h3 class="typeWork__title">Accounting / Finance</h3>
+              <p class="typeWork__text">100 open position</p>
+            </a>
+            <a href="#" class="typeWork">
+              <img src="img/Shape3.png" alt="Design" class="typeWork__img">
+              <img src="img/Shape3_white.png" alt="Design" class="typeWork__img_hover">
+
+              <h3 class="typeWork__title">Design / Creative</h3>
+              <p class="typeWork__text">100 open position</p>
+            </a>
+            <a href="#" class="typeWork">
+              <img src="img/Shape4.png" alt="Progammer" class="typeWork__img">
+              <img src="img/Shape4_white.png" alt="Progammer" class="typeWork__img_hover">
+
+              <h3 class="typeWork__title">Progammer</h3>
+              <p class="typeWork__text">100 open position</p>
+            </a>
+            <a href="#" class="typeWork">
+              <img src="img/Shape5.png" alt="Operation" class="typeWork__img">
+              <img src="img/Shape5_white.png" alt="Operation" class="typeWork__img_hover">
+
+              <h3 class="typeWork__title">Production / Operation</h3>
+              <p class="typeWork__text">100 open position</p>
+            </a>
+            <a href="#" class="typeWork">
+              <img src="img/Shape6.png" alt="Training" class="typeWork__img">
+              <img src="img/Shape6_white.png" alt="Training" class="typeWork__img_hover">
+
+              <h3 class="typeWork__title">Education / Training</h3>
+              <p class="typeWork__text">100 open position</p>
+            </a>
+            <a href="#" class="typeWork">
+              <img src="img/Shape7.png" alt="Consultancy" class="typeWork__img">
+              <img src="img/Shape7_white.png" alt="Consultancy" class="typeWork__img_hover">
+
+              <h3 class="typeWork__title">Consultancy</h3>
+              <p class="typeWork__text">100 open position</p>
+            </a>
+          </div>
+        </section>
+        <section class="company">
+          <div class="company_content">
+            <h2 class="company__title">Over 10,000 top companies join with us</h2>
+            <p class="company__text">Posting now includes out of the box integration with major CRM & accounting and ERP platforms, as well as an open API that allows you to seamlessly integrate with your business systems.</p>
+          </div>
+          <div class="logos">
+            <a href="#" class="logos__link logos_1"><img src="img/logo_1.png" alt="logo" class="logos__img"></a>
+            <a href="#" class="logos__link logos_2"><img src="img/logo_2.png" alt="logo" class="logos__img"></a>
+            <a href="#" class="logos__link logos_3"><img src="img/logo_3.png" alt="logo" class="logos__img"></a>
+            <a href="#" class="logos__link logos_4"><img src="img/logo_4.png" alt="logo" class="logos__img"></a>
+            <a href="#" class="logos__link logos_5"><img src="img/logo_5.png" alt="logo" class="logos__img"></a>
+            <a href="#" class="logos__link logos_6"><img src="img/logo_6.png" alt="logo" class="logos__img"></a>
+            <a href="#" class="logos__link logos_7"><img src="img/logo_7.png" alt="logo" class="logos__img"></a>
+            <a href="#" class="logos__link logos_8"><img src="img/logo_8.png" alt="logo" class="logos__img"></a>
+            <a href="#" class="logos__link logos_9"><img src="img/logo_9.png" alt="logo" class="logos__img"></a>
+            <a href="#" class="logos__link logos_10"><img src="img/logo_10.png" alt="logo" class="logos__img"></a>
+
+          </div>
+        </section>
+        <div class="pic">
+          <img src="img/come_on.png" alt="join with us" class="pic_img">
+          <img src="img/back_left.png" alt="" class="pic_left">
+          <img src="img/back_right.png" alt="" class="pic_right">
+          <h2 class="pic_title">Come on, join with us !</h2>
+          <p class="pic_text">Create an account and refer your friend</p>
+        </div>
+        <section class="testimonials testimonials_margin">
+          <div class="testimonials_top">
+            <h3 class="testimonials__title">Testimonials</h3>
+            <div class="testimonials__pagination">
+              <i class="testimonials__arrow fas fa-arrow-left"></i>
+              <i class="testimonials__arrow testimonials__arrow_active fas fa-arrow-right"></i>
+            </div>
+          </div>
+          
+          <div class="testimonials__items">
+            <article class="feedback">
+              <img src="img/avatar_1.png" alt="avatar" class="feedback__img">
+              <p class="feedback__rating"><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span  class="feedback__rating_all fas"></span></p>
+              <p class="feedback__text">I love Jobest, easy platform to&nbsp;use,fantasic staff and nothing but great results!</p>
+            </article>
+            <article class="feedback">
+              <img src="img/avatar_2.png" alt="avatar" class="feedback__img">
+              <p class="feedback__rating"><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span  class="feedback__rating_half fas"></span></p>
+              <p class="feedback__text">The company is a priceless tool that helps us drive Sales and Support through every step&nbsp;of&nbsp;the&nbsp;funnel.</p>
+            </article>
+            <article class="feedback">
+              <img src="img/avatar_3.png" alt="avatar" class="feedback__img">
+              <p class="feedback__rating"><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span  class="feedback__rating_all fas"></span></p>
+              <p class="feedback__text">I love Jobest, easy platform to&nbsp;use,fantasic staff and nothing but great results!</p>
+            </article>
+            
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer_top email">
+            <h3 class="email__title">Get started now</h3>
+            <form action="" class="email__form">
+              <input type="email" class="email__input" placeholder="email adreess" required><input type="submit" class="email__button" value="SUBMIT">
+            </form>
+          </div>
+          <div class="footer_middle">
+            <article class="footer__article">
+              <h4 class="footer__title">CATEGORIES</h4>            
+              <ul>
+                <li class="footer__list"><a href="#" class="footer__link">iOS Developers</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Front-End Developers</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">UX Designers</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">UI Designers</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Writing Translation</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Program & Tech</a></li>
+              </ul>
+            </article>
+            <article class="footer__article">
+              <h4 class="footer__title">COMMUNITY</h4>                   
+              <ul>
+                <li class="footer__list"><a href="#" class="footer__link">Events</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Blog</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Forum</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Podcast</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Affiliates</a></li>
+                <li class="footer__list"><a href="#" class="footer__link"> Invite a Friend</a></li>
+              </ul>
+            </article>
+            <article class="footer__article">
+              <h4 class="footer__title">ABOUT</h4>      
+              <ul>
+                <li class="footer__list"><a href="#" class="footer__link">About Us</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Partnerships</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Finance Experts</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Project Management</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Product Manager</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">The Team</a></li>
+              </ul>
+            </article>
+            <article class="footer__article">
+              <h4 class="footer__title">CONTACT</h4>     
+              <ul>
+                <li class="footer__list"><a href="#" class="footer__link">Contuct Us</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Press Center</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Careers</a></li>
+                <li class="footer__list"><a href="#" class="footer__link">Faq</a></li>
+              </ul>
+            </article>
+          </div>
+          <div class="footer__bottom">
+            <div class="network">
+              <a class="network__item"><i class="fab fa-instagram"></i></a>
+              <a class="network__item"><i class="fab fa-facebook-f"></i></a>
+              <a class="network__item"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          
+        </footer>
+
     </div>
         
 
