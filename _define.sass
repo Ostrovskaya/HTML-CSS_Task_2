@@ -1,0 +1,86 @@
+$width_page: 1920px
+
+$color_title: rgba(17, 45, 88, 1)
+$color_text: rgba(51, 82, 130, 1)
+
+$color_work_title: rgba(37, 76, 134, 1)
+$color_work_text: rgba(31, 58, 99, 1)
+
+$color_button_light: rgba(41, 99, 187, 1)
+$color_button_dark: rgba(24, 56, 107, 1)
+
+$color_white: rgba(255, 255, 255, 1)
+
+$font_text: 'Rubik', sans-serif
+$font_title: 'Poppins', sans-serif
+$font_item: 'Nunito Sans', sans-serif     
+
+    
+.title
+    font-family: $font_title
+    font-weight: 500
+    color: $color_title
+
+.text
+    font-family: 'Rubik', sans-serif
+    color: $color_text
+
+.flex
+    &_left_right 
+        justify-content: space-between
+        display: flex
+
+    &_vert_center 
+        display: flex
+        align-items: center
+
+    &_center 
+        justify-content: center
+        @extend .flex_vert_center
+
+    &_table
+        justify-content: space-between
+        display: flex
+        flex-wrap: wrap
+
+    &_around
+        display: flex
+        justify-content: space-around
+
+@-webkit-keyframes increase
+  0% 
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+  100% 
+    -webkit-transform: scale(1.4)
+    transform: scale(1.4)
+
+@keyframes increase
+  0% 
+    -webkit-transform: scale(1)
+    transform: scale(1)
+  
+  100% 
+    -webkit-transform: scale(1.4)
+    transform: scale(1.4)
+  
+
+@-webkit-keyframes shadow
+  0% 
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+
+  100% 
+    -webkit-box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3), -5px -10px 20px rgba(255, 255, 255, 0.5)
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3), -5px -10px 20px rgba(255, 255, 255, 0.5)
+
+@keyframes shadow
+  0% 
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+  
+  100% 
+    -webkit-box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3), -3px -1px 10px rgba(255, 255, 255, 0.5)
+    box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.5), -3px -1px 10px rgba(255, 255, 255, 0.5)
+    

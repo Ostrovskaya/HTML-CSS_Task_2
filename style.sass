@@ -1,54 +1,33 @@
-
-$width_page: 1920px
-$color_title: #112d58
-$color-text: #2d2058
+@import 'mixins'
+@import 'define'
 
 * 
     padding: 0
     margin: 0
+
+a:hover
+    text-decoration: none
 
 input
     border: none
     padding: 0
     margin: 0
 
+ul 
+    list-style: none
 
 .center
     margin: 0 auto
     width: $width_page
 
-.title
-    font-family: 'Poppins', sans-serif 
-    font-weight: 500
-    color: $color_title
-
-.text
-    font-family: 'Rubik', sans-serif
-    color: $color-text
-
-.flex
-    &_left_right 
-        justify-content: space-between
-        display: flex
-
-    &_vert_center 
-        display: flex
-        align-items: center
-
-    &_center 
-        justify-content: center
-        @extend .flex_vert_center
-
-// font-family: 'Rubik', sans-serif
-//font-family: 'Poppins', sans-serif
-//font-family: 'Nunito Sans', sans-serif 
 
 .conteiner
     position: relative   
-    padding: 0 234px 0 256px
+    padding: 0 256px 0 256px
 
 .background
     width: 100%
+    height: 100%
     position: absolute
     right: 0
     &_header
@@ -60,16 +39,29 @@ input
         top: 667px
         z-index: 2
 
+    &_aside_rigth
+        position: absolute
+        right: 0
+        top: 2390px
+
+    &_footer
+        position: absolute
+        left: 0
+        bottom: 0
+        z-index: 3
+
+
 .header
-    position: relative
-    z-index: 1 
     margin-bottom: 424px
     &_top
         @extend .flex_left_right   
 
     &_content
-       width: 655px 
-       margin-top: 223px
+        width: 655px 
+        margin-top: 223px
+        position: relative
+            
+
     &_title
         @extend .title
         font-size: 66px
@@ -90,39 +82,78 @@ input
         &_input
             height: 78px
             width: 100%
-            background-color: #ffffff
+            background-color: $color_white
             border-radius: 39px
-            box-shadow: 0px 16px 122px 0px #d3d4d4
-            font-family: 'Nunito Sans', sans-serif 
+            box-shadow: 0px 16px 122px 0px rgba(211, 212, 212, 0.68)
+            font-family: $font_item
             font-size: 24px
             font-weight: 600
             color: $color-text
             letter-spacing: 0.01em
             line-height: 42px
-            padding: 0 85px 0 53px
+            padding: 0 180px 0 53px
+
             &::placeholder
                color: $color-text 
                font-weight: 400
 
-        &_buttom  
+        &_buttom 
+            padding: 0 15px 
             height: 60px
             width: 60px
             background-color: #ffa024
             border-radius: 60px 
+            line-height: 60px
             border: none 
             position: absolute
             right: 13px
             top: 9px 
+            color: $color_white!important
+            font-size: 26px
+            transition-property: width
+            transition-duration: 1s
 
-            &:hover
-               background-color: #ee8e11 
+            &:hover        
+                width: 150px 
+
+            &:hover .header_form_search
+                transition-property: opacity, position
+                transition-duration: 0.3s
+                transition-delay: 1s
+                opacity: 1 
+
+
+        &_search
+            margin-left: 10px
+            opacity: 0
+            position: absolute
+
 
 .logo
-    font-family: 'Rubik', sans-serif
+    font-family: $font_text
     font-size: 36px
     font-weight: bold
     font-style: italic    
-    margin-top: 68px  
+    margin-top: 68px 
+    line-height: 35px
+    position: relative 
+
+    &::before
+        content: ""
+        background-color: rgba(255,255,255,0.7)
+        height: 100%
+        width: 15px
+        display: block
+        position: absolute
+        left: -25px
+        transform: skewX(-45deg)       
+
+    &:hover 
+        &::before
+            transform: skewX(-45deg) translateX(170px)
+            transition: all 0.7s ease-in-out  
+                
+
     &_gold
       color: rgba(253, 173, 51, 1)  
     &_blue
@@ -130,18 +161,44 @@ input
 
 .nav
     margin-top: 52px
+    z-index: 1
 
     &-link
-        font-family: 'Nunito Sans', sans-serif 
+        font-family: $font_item
         font-size: 18px
         font-weight: 600
-        color: rgba(255, 255, 255, 1)  
+        color: $color_white 
         padding: 0 43px 
         line-height: 44px
-        &:hover
-           border-radius: 21px 
-           border: 1px solid rgba(255, 255, 255, 1)      
-           color: rgba(255, 255, 255, 1)  
+        
+        position: relative
+
+        &:hover       
+           color: $color_white
+        
+        &::before,
+        &::after 
+            border-radius: 21px 
+            content: ""
+            position: absolute 
+            border-style: solid
+            border-color: $color_white
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+
+        &::before                
+            border-width: 2px 0 2px 0
+            transform:  scaleX(0)
+        &::after           
+            border-width: 0 2px 0 2px
+            transform:  scaleY(0)
+
+        &:hover::before,
+        &:hover::after 
+            transform:  scale(1, 1)
+            transition: transform .5s ease
 
 
     &_button
@@ -150,18 +207,24 @@ input
         margin-left: 36px
         width: 137px
         border-radius: 21px  
-        background-image: linear-gradient(-80deg,  rgba(24, 56, 107, 1) 0%,rgba(41, 99, 187, 1) 99%)
+        background: $color_button_light
+        box-shadow: -70px -2px 35px 0px $color_button_dark inset
         @extend .flex_center
-
+        transition: all 1s ease
+  
         &:hover
-           color: rgba(255, 255, 255, 1) 
-           background-image: linear-gradient(-80deg,  rgba(24, 56, 107, 1) 0%,#457fd6 99%) 
+           color: $color_white
+           box-shadow: 80px 8px 30px 0px $color_button_dark inset
            border: none
+        &:hover::before,
+        &:hover::after 
+            transform:  scale(0, 0)
 
 .main
     width: 100%
     &_block
         width: 100%
+        margin-bottom: 135px
         @extend .flex_left_right 
 
     &_find
@@ -186,4 +249,376 @@ input
         line-height: 42px
 
    
-   
+.category
+    text-align: center
+    &__title 
+        @extend .title 
+        font-size: 56px 
+        margin-bottom: 26px
+
+    &__text
+        @extend .text
+        font-size: 22px
+        letter-spacing: 0.02em
+        margin-bottom: 80px
+
+    &__items
+        @extend .flex_table
+        .typeWork
+            margin: 32px 52px 106px 52px   
+        
+.typeWork  
+    position: relative
+    z-index: 5
+    display: block 
+    padding-top: 77px 
+    height: 388px
+    width: 348px
+    border-radius: 30px
+    box-shadow: 0px 10px 99px 7px rgba(33, 138, 218, 0.12)
+    text-align: center
+        
+    &__img
+        height: 146px
+        width: 146px
+        &_hover
+            display: none
+    &__title
+        color: $color_work_title
+        font-family: $font_title 
+        font-size: 26px
+        font-weight: bold  
+        margin-top: 44px 
+        margin-bottom: 10px
+    &__text
+        color: $color_work_text
+        font-family: $font_text
+        font-size: 22px
+    &:hover
+        +gradient(180deg, rgba(78, 199, 245, 1), rgba(92, 117, 254, 1))
+      
+
+    &:hover .typeWork__img
+        display: none
+
+    &:hover .typeWork__img_hover
+        display: inline
+    
+    &:hover .typeWork__title,
+    &:hover .typeWork__text
+        color: $color_white
+        
+.company
+    @extend .flex_left_right
+
+    &_content
+        width: 598px
+        padding-top: 200px
+
+    &__title
+        @extend .title
+        width: 100%
+        font-size: 46px
+        margin-bottom: 52px
+    &__text
+        width: 100%
+        @extend .text
+        font-size: 22px
+        line-height: 30px
+
+.logos
+    width: 716px
+    height: 679px
+    position: relative
+
+    &__link
+        border-radius: 50%
+        box-shadow: 0px 10px 46px 4px rgba(33, 138, 218, 0.1)
+        @extend .flex_center 
+        position: absolute
+        transition: all 1s
+
+        &:hover
+           transform:  scale(1.3, 1.3) 
+           box-shadow: 0px 10px 46px 4px rgba(33, 138, 218, 0.3)
+
+
+    &_1
+        left: 146px
+        top: 42px
+        height: 102px
+        width: 102px
+    &_2
+        right: 224px
+        top: 75px
+        height: 112px
+        width: 112px
+    &_3
+        right: 181px
+        bottom: 285px
+        height: 80px
+        width: 80px
+    &_4
+        right: 224px
+        bottom: 62px
+        height: 120px
+        width: 120px
+    &_5
+        bottom: 96px 
+        left: 211px
+        height: 96px
+        width: 96px        
+    &_6
+        bottom: 159px 
+        left: 47px
+        height: 134px
+        width: 134px
+    &_7
+        top: 226px
+        left: 37px
+        height: 94px
+        width: 94px
+    &_8
+        top: 198px
+        left: 171px
+        height: 250px
+        width: 250px
+    &_9
+        right: 52px
+        top: 175px
+        height: 97px
+        width: 97px
+    &_10
+        right: 24px
+        bottom: 120px
+        height: 154px
+        width: 154px
+
+.pic
+    margin-top: 74px
+    position: relative
+    text-align: center
+    z-index: 3
+    &_left
+        position: absolute
+        left: -256px
+        top: 275px
+
+    &_right
+        position: absolute
+        right: -256px
+        top: 151px
+    
+    &_img
+        position: relative
+        z-index: 3
+
+    &_title
+        @extend .title
+        font-size: 56px
+        margin-top: 55px
+        margin-bottom: 15px
+
+    &_text
+        @extend .text
+        font-size: 22px
+
+.testimonials  
+    position: relative
+    z-index: 6
+    &_margin
+        margin-top: 200px
+        margin-bottom: 270px
+
+    &_top
+        margin-bottom: 100px
+        @extend .flex_left_right 
+
+    &__title
+       color: $color_work_text
+       font-family: $font_title
+       font-size: 46px 
+       font-weight: 500
+
+    &__pagination
+        width: 100px
+        @extend .flex_left_right
+
+    &__arrow
+        color: rgba(213, 224, 241, 1)  
+        font-size: 35px
+
+        &_active
+            color: $color_work_text
+            text-shadow: 0px 0px 0px rgba(41, 99, 187, 0)
+            transition: text-shadow 0.4s
+
+            &:hover
+                text-shadow: 3px 3px 2px rgba(41, 99, 187, 0.4)
+
+    &__items
+        @extend .flex_around
+
+.feedback
+    padding: 114px 50px 40px 50px
+    min-height: 442px
+    width: 384px
+    background-color: $color_white
+    border-radius: 20px
+    box-shadow: 4px 7px 33px 2px rgba(33, 138, 218, 0.1)
+    position: relative
+    z-index: 6
+    text-align: center
+    transition: transform 1s
+
+    &:hover
+        transform: scale(1.2,1.2)
+
+    &__img
+        position: absolute
+        top: -53px
+        left: 125px
+        height: 125px
+        width: 122px
+
+    &__rating
+        font-family: "FontAwesome"
+        font-size: 50px
+        
+        &_all::before         
+            content: '\f005'
+            color: rgba(255, 151, 77, 1)
+            font-weight: 900
+        
+        &_half::before
+            content: "\f5c0"
+            color: rgba(255, 151, 77, 1)
+            font-weight: 900
+
+
+    &__text
+        margin-top: 34px
+        color: $color_work_text
+        font-family: $font_text
+        font-size: 20px
+        line-height: 35px
+
+        
+.footer
+    color: $color_white
+    width: 100%
+    position: relative
+    z-index: 4    
+    padding: 322px 99px  56px  99px      
+
+    &_top,
+    &_middle
+        @extend  .flex_left_right
+
+    &_top
+       margin-bottom: 126px 
+
+    &__article
+        width: 20%
+
+    &__title
+        font-family: $font_title
+        font-size: 22px
+        font-weight: bold
+        letter-spacing: 0.1em
+        line-height: 40px
+        text-transform: uppercase
+        margin-bottom: 20px 
+
+    &__link
+        position: relative
+        font-family: $font_text
+        font-size: 18px
+        color: inherit
+        line-height: 40px
+
+        &:hover
+            color: $color_white
+        
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            bottom: -2px
+            width: 100%
+            height: 2px
+            background: $color_white
+            transition: all 0.5s
+            transform:  scaleX(0)
+
+        &:hover::before 
+            transform:  scaleX(1)
+            
+
+    &__bottom
+        margin-top: 70px
+        @extend .flex_around
+
+.email
+    &__title
+        font-family: $font_title
+        font-size: 55px
+        font-weight: 500
+        line-height: 82px
+
+    &__input
+        padding: 0 30px
+        width: 286px
+        height: 80px
+        background-color: $color_white
+        border-radius: 5px 0px 0px 5px
+        font-family: $font_text
+        font-size: 16px
+        font-weight: 300
+        color: rgba(48, 60, 98, 1)
+        letter-spacing: 0.03em
+
+    &__button
+        font-family: $font_text
+        font-size: 18px
+        font-weight: 500
+        color: $color_white
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        height: 80px
+        width: 200px
+        border-radius: 0px 5px 5px 0px
+        background-size: 200% auto
+        +gradient3(-80deg, $color_button_light, $color_button_dark)
+        transition: 0.5s
+
+        &:hover
+            background-position: right center
+
+.network
+    display: flex
+
+    &__item
+        height: 60px
+        width: 60px
+        margin: 0 16px
+        border-radius: 50%
+        font-size: 30px
+        +gradient(-80deg, $color_button_dark, $color_button_light)
+        @extend .flex_center
+
+        &:hover
+	        animation: increase 0.4s ease-in-out both, shadow 0.4s linear 0.4s both
+            
+            
+
+
+  
+
+    
+
+
+                
+
+
+    
