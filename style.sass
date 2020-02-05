@@ -5,8 +5,10 @@
     padding: 0
     margin: 0
 
+a,
 a:hover
     text-decoration: none
+    color: inherit
 
 input
     border: none
@@ -16,14 +18,19 @@ input
 ul 
     list-style: none
 
-.center
-    margin: 0 auto
-    width: $width_page
-
-
 .conteiner
     position: relative   
-    padding: 0 256px 0 256px
+    min-width: $width_page 
+    padding: 0 256px
+    
+/*    padding: 0 calc( 50% - #{$width_content}/2 ) */
+
+
+@media ( min-width: $width_page )
+    .conteiner
+        padding: 0 356px
+
+
 
 .background
     width: 100%
@@ -49,8 +56,18 @@ ul
         left: 0
         bottom: 0
         z-index: 3
+        width: 100%
 
+        &_1
+            bottom: 56px
+            max-height: 1069.03px
 
+        &_2
+            max-height: 1016.94px
+
+        &_3
+            max-height: 669.78px
+            
 .header
     margin-bottom: 424px
     &_top
@@ -60,7 +77,10 @@ ul
         width: 655px 
         margin-top: 223px
         position: relative
-            
+
+    @media ( min-width: $width_page )
+        &_content
+            width: 50%       
 
     &_title
         @extend .title
@@ -77,7 +97,7 @@ ul
 
     &_form
         position: relative
-        width: 100%
+        width: 655px
         height: 78px
         &_input
             height: 78px
@@ -236,6 +256,15 @@ ul
         width: 623px 
         padding-top: 148px
 
+    @media ( min-width: $width_page )
+        &_block
+           justify-content: space-around 
+        &_find
+            width: 30%          
+        &_million
+            width: 30%
+
+
     &_title
         @extend .title
         font-size: 46px
@@ -269,20 +298,49 @@ ul
         
 .typeWork  
     position: relative
-    z-index: 5
-    display: block 
+    z-index: 5   
     padding-top: 77px 
     height: 388px
     width: 348px
     border-radius: 30px
     box-shadow: 0px 10px 99px 7px rgba(33, 138, 218, 0.12)
     text-align: center
+    transition: background 1s ease
+    background: $color_white
+
+    &:hover .typeWork_color  
+        opacity: 1
+
+    &_color
+        +gradient(180deg, rgba(78, 199, 245, 1), rgba(92, 117, 254, 1))
+        border-radius: 30px
+        position: absolute
+        z-index: -1
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        transition: opacity 1s linear
+
+
+    &_pic
+        @extend .flex_center
+    
+    & > *
+        transition: all 1s
         
     &__img
-        height: 146px
-        width: 146px
+        position: relative 
+        z-index: 5
+        opacity: 1
+        transition: all 1s
         &_hover
-            display: none
+           position: absolute 
+
+    &:hover .typeWork__img
+            opacity: 0
+
     &__title
         color: $color_work_title
         font-family: $font_title 
@@ -294,19 +352,14 @@ ul
         color: $color_work_text
         font-family: $font_text
         font-size: 22px
-    &:hover
-        +gradient(180deg, rgba(78, 199, 245, 1), rgba(92, 117, 254, 1))
-      
-
-    &:hover .typeWork__img
-        display: none
-
-    &:hover .typeWork__img_hover
-        display: inline
     
     &:hover .typeWork__title,
     &:hover .typeWork__text
         color: $color_white
+
+@media ( min-width: $width_page )
+    .typeWork
+        flex-basis: 26%
         
 .company
     @extend .flex_left_right
@@ -320,11 +373,19 @@ ul
         width: 100%
         font-size: 46px
         margin-bottom: 52px
+
     &__text
         width: 100%
         @extend .text
         font-size: 22px
         line-height: 30px
+
+@media ( min-width: $width_page )
+    .company
+        justify-content: space-around 
+        &_content
+            width: 30%          
+
 
 .logos
     width: 716px
