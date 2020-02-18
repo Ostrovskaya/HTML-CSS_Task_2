@@ -18,18 +18,15 @@ input
 ul 
     list-style: none
 
+
 .conteiner
     position: relative   
-    min-width: $width_page 
+    width: $width_page    
+    margin: 0 auto
     padding: 0 256px
+  
     
 /*    padding: 0 calc( 50% - #{$width_content}/2 ) */
-
-
-@media ( min-width: $width_page )
-    .conteiner
-        padding: 0 356px
-
 
 
 .background
@@ -69,6 +66,7 @@ ul
             max-height: 669.78px
             
 .header
+    width: 100%
     margin-bottom: 424px
     &_top
         @extend .flex_left_right   
@@ -279,6 +277,7 @@ ul
 
    
 .category
+    width: 100%
     text-align: center
     &__title 
         @extend .title 
@@ -292,11 +291,14 @@ ul
         margin-bottom: 80px
 
     &__items
-        @extend .flex_table
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
         .typeWork
-            margin: 32px 52px 106px 52px   
+            margin: 32px 10px 106px 10px   
         
 .typeWork  
+    
     position: relative
     z-index: 5   
     padding-top: 77px 
@@ -331,15 +333,12 @@ ul
         transition: all 1s
         
     &__img
-        position: relative 
         z-index: 5
         opacity: 1
         transition: all 1s
-        &_hover
-           position: absolute 
 
     &:hover .typeWork__img
-            opacity: 0
+        filter: brightness(00%) saturate(00%) invert(1)    
 
     &__title
         color: $color_work_title
@@ -357,11 +356,9 @@ ul
     &:hover .typeWork__text
         color: $color_white
 
-@media ( min-width: $width_page )
-    .typeWork
-        flex-basis: 26%
         
 .company
+    width: 100%
     @extend .flex_left_right
 
     &_content
@@ -379,12 +376,6 @@ ul
         @extend .text
         font-size: 22px
         line-height: 30px
-
-@media ( min-width: $width_page )
-    .company
-        justify-content: space-around 
-        &_content
-            width: 30%          
 
 
 .logos
@@ -456,6 +447,7 @@ ul
         width: 154px
 
 .pic
+    width: 100%
     margin-top: 74px
     position: relative
     text-align: center
@@ -485,6 +477,7 @@ ul
         font-size: 22px
 
 .testimonials  
+    width: 100%
     position: relative
     z-index: 6
     &_margin

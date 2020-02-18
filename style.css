@@ -33,7 +33,7 @@
           justify-content: center;
 }
 
-.flex_table, .category__items {
+.flex_table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -119,17 +119,12 @@ ul {
 
 .conteiner {
   position: relative;
-  min-width: 1920px;
+  width: 1920px;
+  margin: 0 auto;
   padding: 0 256px;
 }
 
 /*    padding: 0 calc( 50% - 1408px/2 ) */
-@media (min-width: 1920px) {
-  .conteiner {
-    padding: 0 356px;
-  }
-}
-
 .background {
   width: 100%;
   height: 100%;
@@ -176,6 +171,7 @@ ul {
 }
 
 .header {
+  width: 100%;
   margin-bottom: 424px;
 }
 
@@ -445,6 +441,7 @@ ul {
 }
 
 .category {
+  width: 100%;
   text-align: center;
 }
 
@@ -459,8 +456,18 @@ ul {
   margin-bottom: 80px;
 }
 
+.category__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .category__items .typeWork {
-  margin: 32px 52px 106px 52px;
+  margin: 32px 10px 106px 10px;
 }
 
 .typeWork {
@@ -503,19 +510,15 @@ ul {
 }
 
 .typeWork__img {
-  position: relative;
   z-index: 5;
   opacity: 1;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
-.typeWork__img_hover {
-  position: absolute;
-}
-
 .typeWork:hover .typeWork__img {
-  opacity: 0;
+  -webkit-filter: brightness(0%) saturate(0%) invert(1);
+          filter: brightness(0%) saturate(0%) invert(1);
 }
 
 .typeWork__title {
@@ -538,11 +541,8 @@ ul {
   color: white;
 }
 
-@media (min-width: 1920px) {
-  .typeWork {
-    -ms-flex-preferred-size: 26%;
-        flex-basis: 26%;
-  }
+.company {
+  width: 100%;
 }
 
 .company_content {
@@ -560,16 +560,6 @@ ul {
   width: 100%;
   font-size: 22px;
   line-height: 30px;
-}
-
-@media (min-width: 1920px) {
-  .company {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .company_content {
-    width: 30%;
-  }
 }
 
 .logos {
@@ -665,6 +655,7 @@ ul {
 }
 
 .pic {
+  width: 100%;
   margin-top: 74px;
   position: relative;
   text-align: center;
@@ -699,6 +690,7 @@ ul {
 }
 
 .testimonials {
+  width: 100%;
   position: relative;
   z-index: 6;
 }

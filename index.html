@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     
@@ -12,9 +11,7 @@
     <script src="https://kit.fontawesome.com/659140403b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
     <div class="conteiner">
         <div class="background">
             <img src="img/header.png" alt="" class="background_header">
@@ -22,7 +19,10 @@
             <img src="img/aside_right.png" alt="" class="background_aside_rigth">
             <img src="img/footer_layer_1.png" alt="" class="background_footer background_footer_1">
             <img src="img/footer_layer_2.png" alt="" class="background_footer background_footer_2">
-            <img src="img/footer_layer_3.png" alt="" class="background_footer background_footer_3"> 
+            <img src="img/footer_layer_3.png" alt="" class="background_footer background_footer_3">
+
+
+    
         </div>
         <header class="header">
             <div class="header_top">
@@ -49,12 +49,12 @@
                <h1 class="header_title">Find your job better and faster</h1> 
                <p class="header_text">Find your best job better and faster with Jobest</p>
                <form action="#" class="header_form">
-                   <input type="" class="header_form_input" placeholder="Seacrh by skill, company and job"  required>
+                   <input type="text" class="header_form_input" placeholder="Seacrh by skill, company and job"  required>
                    <a class="header_form_buttom"><i class="fas fa-search"></i><span class="header_form_search">Search</span></a>
                </form>
             </div>         
         </header> 
-        <section class="main">
+        <div class="main">
           <article class="main_block">
             <img src="img/find.png" alt="pic" class="maim_block_img">
             <div class="main_find">
@@ -69,7 +69,7 @@
             </div>
             <img src="img/million.png" alt="pic" class="maim_block_img">
           </article>
-        </section>
+        </div>
         <section class="category">
           <h2 class="category__title">Browse jobs by category</h2>
           <p class="category__text">Choose from the list of most popular categories</p>
@@ -77,7 +77,6 @@
             <a href="#" class="typeWork"><span class="typeWork_color"></span>
               <div class="typeWork_pic">
                 <img src="img/Shape2.png" alt="Finance" class="typeWork__img">
-                <img src="img/Shape2_white.png" alt="Finance" class="typeWork__img_hover">
               </div>
               <h3 class="typeWork__title">Accounting / Finance</h3>
               <p class="typeWork__text">100 open position</p>
@@ -85,7 +84,6 @@
             <a href="#" class="typeWork"><span class="typeWork_color"></span>
               <div class="typeWork_pic">
                 <img src="img/Shape3.png" alt="Design" class="typeWork__img">
-                <img src="img/Shape3_white.png" alt="Design" class="typeWork__img_hover">
              </div>
               <h3 class="typeWork__title">Design / Creative</h3>
               <p class="typeWork__text">100 open position</p>
@@ -93,7 +91,6 @@
             <a href="#" class="typeWork"><span class="typeWork_color"></span>
               <div class="typeWork_pic">
                 <img src="img/Shape4.png" alt="Progammer" class="typeWork__img">
-                <img src="img/Shape4_white.png" alt="Progammer" class="typeWork__img_hover">
               </div>
               <h3 class="typeWork__title">Progammer</h3>
               <p class="typeWork__text">100 open position</p>
@@ -101,7 +98,6 @@
             <a href="#" class="typeWork"><span class="typeWork_color"></span>
               <div class="typeWork_pic">
                 <img src="img/Shape5.png" alt="Operation" class="typeWork__img">
-                <img src="img/Shape5_white.png" alt="Operation" class="typeWork__img_hover">
               </div>
               <h3 class="typeWork__title">Production / Operation</h3>
               <p class="typeWork__text">100 open position</p>
@@ -109,7 +105,6 @@
             <a href="#" class="typeWork"><span class="typeWork_color"></span>
               <div class="typeWork_pic">
                 <img src="img/Shape6.png" alt="Training" class="typeWork__img">
-                <img src="img/Shape6_white.png" alt="Training" class="typeWork__img_hover">
               </div>
               <h3 class="typeWork__title">Education / Training</h3>
               <p class="typeWork__text">100 open position</p>
@@ -117,7 +112,6 @@
             <a href="#" class="typeWork"><span class="typeWork_color"></span>
               <div class="typeWork_pic">
                 <img src="img/Shape7.png" alt="Consultancy" class="typeWork__img">
-                <img src="img/Shape7_white.png" alt="Consultancy" class="typeWork__img_hover">
               </div>
               <h3 class="typeWork__title">Consultancy</h3>
               <p class="typeWork__text">100 open position</p>
@@ -160,28 +154,28 @@
           </div>
           
           <div class="testimonials__items">
-            <article class="feedback">
+            <div class="feedback">
               <img src="img/avatar_1.png" alt="avatar" class="feedback__img">
               <p class="feedback__rating"><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span  class="feedback__rating_all fas"></span></p>
               <p class="feedback__text">I love Jobest, easy platform to&nbsp;use,fantasic staff and nothing but great results!</p>
-            </article>
-            <article class="feedback">
+            </div>
+            <div class="feedback">
               <img src="img/avatar_2.png" alt="avatar" class="feedback__img">
               <p class="feedback__rating"><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span  class="feedback__rating_half fas"></span></p>
               <p class="feedback__text">The company is a priceless tool that helps us drive Sales and Support through every step&nbsp;of&nbsp;the&nbsp;funnel.</p>
-            </article>
-            <article class="feedback">
+            </div>
+            <div class="feedback">
               <img src="img/avatar_3.png" alt="avatar" class="feedback__img">
               <p class="feedback__rating"><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span class="feedback__rating_all fas"></span><span  class="feedback__rating_all fas"></span></p>
               <p class="feedback__text">I love Jobest, easy platform to&nbsp;use,fantasic staff and nothing but great results!</p>
-            </article>
+            </div>
             
           </div>
         </section>
         <footer class="footer">
           <div class="footer_top email">
             <h3 class="email__title">Get started now</h3>
-            <form action="" class="email__form">
+            <form action="#" class="email__form">
               <input type="email" class="email__input" placeholder="email adreess" required><input type="submit" class="email__button" value="SUBMIT">
             </form>
           </div>
@@ -241,6 +235,8 @@
 
     </div>
         
-
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
